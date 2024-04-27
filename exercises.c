@@ -147,9 +147,9 @@ int parentesisBalanceados(char *cadena) {
     }
     
     if (P1!=NULL)
-      return 1;  // Paréntesis balanceados
+      return 0;  // Paréntesis balanceados
     else
-      return 0;  // Paréntesis no balanceados
+      return 1;  // Paréntesis no balanceados
 }
 
 
