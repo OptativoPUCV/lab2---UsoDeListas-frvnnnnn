@@ -295,3 +295,29 @@ exercises.c:136:12: error: expected ‘(’ before ‘else’
 cc1: all warnings being treated as errors
 Compilation failed
 21182f1
+Sat 27 Apr 2024 03:53:17 AM UTC: 
+ exercises.c | 16 +++++++++-------
+ 1 file changed, 9 insertions(+), 7 deletions(-)
+In file included from test.c:5:
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:130:7: error: ‘else’ without a previous ‘if’
+  130 |       else {
+      |       ^~~~
+exercises.c:131:18: error: assignment to ‘void *’ from ‘int’ makes pointer from integer without a cast [-Werror=int-conversion]
+  131 |         if (dato = pop(P1) == NULL)
+      |                  ^
+exercises.c:131:13: error: suggest parentheses around assignment used as truth value [-Werror=parentheses]
+  131 |         if (dato = pop(P1) == NULL)
+      |             ^~~~
+exercises.c:133:23: error: comparison between pointer and integer [-Werror]
+  133 |         else if (dato == '(' && cadena[pos] != ')')
+      |                       ^~
+exercises.c:135:23: error: comparison between pointer and integer [-Werror]
+  135 |         else if (dato == '[' && cadena[pos] != ']')
+      |                       ^~
+exercises.c:137:23: error: comparison between pointer and integer [-Werror]
+  137 |         else if (dato == '{' && cadena[pos] != '}')
+      |                       ^~
+cc1: all warnings being treated as errors
+Compilation failed
+0390055
