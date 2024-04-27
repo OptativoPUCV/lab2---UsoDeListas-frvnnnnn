@@ -42,12 +42,16 @@ Al finalizar retorna la lista creada.
 */
 
 List* crea_lista() {
-   List* L = create_list();
-    for (unsigned short i = 1; i <= 10; i++)
-      {
-        push(L ,&i);  
-      } 
-   return L;}
+    List* L = create_list();
+    for (unsigned short i= 1;i<= 10;i++) {
+        int* elemento=(int*)malloc(sizeof(int));
+        *elemento=i;
+        push(L,elemento);
+    }
+
+    return L;
+}
+
 /*
 Ejercicio 2.
 Crea una función que reciba una lista de enteros (int*) y 
