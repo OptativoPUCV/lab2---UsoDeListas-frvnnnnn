@@ -45,7 +45,7 @@ List* crea_lista() {
    List* L = create_list();
     for (unsigned short i = 1; i <= 10; i++)
       {
-        push(L ,i);  
+        push(L ,&i);  
       } 
    return L;}
 /*

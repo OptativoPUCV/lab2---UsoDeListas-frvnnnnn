@@ -72,3 +72,65 @@ exercises.c:136:12: error: expected ‘(’ before ‘else’
 cc1: all warnings being treated as errors
 Compilation failed
 c2b4c78
+Sat 27 Apr 2024 03:46:11 AM UTC: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:
+exercises.c: In function ‘copia_pila’:
+exercises.c:100:15: error: implicit declaration of function ‘create_pila’; did you mean ‘create_list’? [-Werror=implicit-function-declaration]
+  100 |   Stack* P3 = create_pila();
+      |               ^~~~~~~~~~~
+      |               create_list
+exercises.c:100:15: error: initialization of ‘Stack *’ {aka ‘List *’} from ‘int’ makes pointer from integer without a cast [-Werror=int-conversion]
+exercises.c:106:33: error: expected statement before ‘)’ token
+  106 |   while ((dato =pop(P3)) !=NULL))
+      |                                 ^
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:122:15: error: implicit declaration of function ‘createlist’; did you mean ‘create_list’? [-Werror=implicit-function-declaration]
+  122 |   Stack* P1 = createlist();
+      |               ^~~~~~~~~~
+      |               create_list
+exercises.c:122:15: error: initialization of ‘Stack *’ {aka ‘List *’} from ‘int’ makes pointer from integer without a cast [-Werror=int-conversion]
+exercises.c:127:23: error: passing argument 2 of ‘push’ makes pointer from integer without a cast [-Werror=int-conversion]
+  127 |         push(P1,cadena[pos]);
+      |                 ~~~~~~^~~~~
+      |                       |
+      |                       char
+In file included from exercises.c:7,
+                 from test.c:5:
+stack.h:11:31: note: expected ‘void *’ but argument is of type ‘char’
+   11 | void push(Stack *stack, void *data) { pushFront(stack, data); }
+      |                         ~~~~~~^~~~
+In file included from test.c:5:
+exercises.c:130:7: error: ‘else’ without a previous ‘if’
+  130 |       else {
+      |       ^~~~
+exercises.c:131:17: error: assignment to ‘void *’ from ‘int’ makes pointer from integer without a cast [-Werror=int-conversion]
+  131 |         if (dato=pop(P1) == NULL)return 0;
+      |                 ^
+exercises.c:131:13: error: suggest parentheses around assignment used as truth value [-Werror=parentheses]
+  131 |         if (dato=pop(P1) == NULL)return 0;
+      |             ^~~~
+exercises.c:133:9: error: ‘else’ without a previous ‘if’
+  133 |         else if (dato=pop(P1)=='(' && cadena[pos] != ')')
+      |         ^~~~
+exercises.c:133:30: error: comparison between pointer and integer [-Werror]
+  133 |         else if (dato=pop(P1)=='(' && cadena[pos] != ')')
+      |                              ^~
+exercises.c:133:22: error: assignment to ‘void *’ from ‘int’ makes pointer from integer without a cast [-Werror=int-conversion]
+  133 |         else if (dato=pop(P1)=='(' && cadena[pos] != ')')
+      |                      ^
+exercises.c:133:18: error: suggest parentheses around assignment used as truth value [-Werror=parentheses]
+  133 |         else if (dato=pop(P1)=='(' && cadena[pos] != ')')
+      |                  ^~~~
+exercises.c:135:12: error: expected ‘(’ before ‘else’
+  135 |         if else (dato=pop(P1)=='[' && cadena[pos] != ']')return 0;
+      |            ^~~~
+      |            (
+exercises.c:136:12: error: expected ‘(’ before ‘else’
+  136 |         if else (dato=pop(P1)=='{' && cadena[pos] != '}')return 0;}
+      |            ^~~~
+      |            (
+cc1: all warnings being treated as errors
+Compilation failed
+3b97dfa
