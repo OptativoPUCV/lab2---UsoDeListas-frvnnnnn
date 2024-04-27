@@ -126,15 +126,15 @@ int parentesisBalanceados(char *cadena) {
       {
         push(P1,(int*)&cadena[pos]);
       }
-      pos++;
+      
       else {
-        if (dato = pop(P1) == NULL)
+        if ((dato = pop(P1)) == NULL)
           return 0;
-        else if (dato == '(' && cadena[pos] != ')')
+        else if (*(char*)dato == '(' && cadena[pos] != ')')
           return 0;
-        else if (dato == '[' && cadena[pos] != ']')
+        else if (*(char*)dato == '[' && cadena[pos] != ']')
           return 0;
-        else if (dato == '{' && cadena[pos] != '}')
+        else if (*(char*)dato == '{' && cadena[pos] != '}')
           return 0;
         pop(P1);
         pos++;
