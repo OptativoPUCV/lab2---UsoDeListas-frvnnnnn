@@ -101,6 +101,7 @@ Puedes usar una pila auxiliar.
 void copia_pila(Stack* P1, Stack* P2) {
   Stack* P3 = create_stack();
   void* dato=first(P1);
+  push(P3, dato);
   while ((dato = next(P1))!=NULL)
     {
       push(P3,dato);
@@ -118,30 +119,6 @@ paraéntesis balanceados. Retorna 1 si están balanceados,
 0 en caso contrario.
 */
 
-int parentesisBalanceados(char *cadena) {
-  void* dato;
-  int pos=0;
-  Stack* P1 = create_list();
-  while (cadena[pos] != '\0')
-    {
-      if (cadena[pos] == '(' || cadena[pos] == '[' || cadena[pos] == '{')
-      {
-        push(P1,(int*)&cadena[pos]);
-      }
-      
-      else {
-        if ((dato = pop(P1)) == NULL)
-          return 0;
-        else if (*(char*)dato == '(' && cadena[pos] != ')')
-          return 0;
-        else if (*(char*)dato == '[' && cadena[pos] != ']')
-          return 0;
-        else if (*(char*)dato == '{' && cadena[pos] != '}')
-          return 0;
-        pop(P1);
-        pos++;
-      }
-    }
-   return 1;
-}
+int parentesisBalanceados(char *cadena) {}
+
 
