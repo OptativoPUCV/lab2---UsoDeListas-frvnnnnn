@@ -378,3 +378,9 @@ test.c:(.text+0xc87): undefined reference to `parentesisBalanceados'
 collect2: error: ld returned 1 exit status
 Compilation failed
 24353e2
+Sat 27 Apr 2024 04:20:19 AM UTC: 
+ exercises.c | 31 ++++++++++++++++++++++++++++++-
+ 1 file changed, 30 insertions(+), 1 deletion(-)
+ tests:  4|2
+total_score: 40/70
+c3176f3
